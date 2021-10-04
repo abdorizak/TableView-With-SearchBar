@@ -20,7 +20,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
     /*
      https://newsapi.org/v2/top-headlines
      sources= bbc-news
-     apiKey=3f67f8a4b26740e3aa2f06d3364945c1
+     apiKey= Here will be your api key
      */
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
     
     func getArticles(){
         let prameter: Parameters = ["country":"us",
-                                    "apiKey":"3f67f8a4b26740e3aa2f06d3364945c1"]
+                                    "apiKey":"past your api Key"]
         AF.request("https://newsapi.org/v2/top-headlines", parameters: prameter).response { response in
             guard let data = response.data else { return }
             
